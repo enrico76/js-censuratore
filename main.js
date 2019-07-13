@@ -23,11 +23,18 @@ for (var i = 0; i < 5; i++) {
   censIns = prompt("inserisci parole da censurare nel testo");
   paroleIns.push(censIns);
 }
+console.log(paroleIns);
+// definisco variabile contatore parole sostituite
+var counter = 0;
 // percorro per tutta la lunghezza l'array e se trova le parole da censurare
 // le sostituisco con xxx
+
 for (var j = 0; j < textInarray.length; j++) {
   if (paroleIns.includes(textInarray[j])) {
     textInarray[j] = sostword;
+    // mando avanti il contatore
+    counter++;
   }
 }
 console.log(textInarray);
+console.log(counter);
